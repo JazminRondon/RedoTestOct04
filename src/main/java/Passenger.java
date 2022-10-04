@@ -4,6 +4,7 @@ public class Passenger extends Person {
     private double creditCardLimit;
     private String[] luggage;
 
+   
     public Passenger(String person, Ticket ticket, double creditCardLimit, String[] luggage) {
         super(person);
         this.ticket = ticket;
