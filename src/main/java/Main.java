@@ -15,5 +15,6 @@ public class Main {
 
 
         System.out.println(passenger57.getAmtOfLuggage());
+        System.out.println(passenger07.getTicket());
     }
 }
