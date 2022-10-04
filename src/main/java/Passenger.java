@@ -1,10 +1,12 @@
+import java.util.List;
+
 public class Passenger extends Person {
 
     private Ticket ticket;
     private double creditCardLimit;
     private String[] luggage;
 
-   
+
     public Passenger(String person, Ticket ticket, double creditCardLimit, String[] luggage) {
         super(person);
         this.ticket = ticket;
@@ -37,7 +39,8 @@ public class Passenger extends Person {
     }
 
     public int getAmtOfLuggage(){
-        return 0;
+    int count=luggage.length;
+        return count;
     }
     public void printTicket(){
 
