@@ -1,28 +1,38 @@
-public class CrewMember extends Person {
+public class CrewMember extends Person implements ServAble, Payable {
 
     private FlightCrewJob job;
     private float salary;
-
-    enum FlightCrewJob{
-        PILOT,
-        CO_PILOT,
-        FLIGHT_ATTENDANT
-    }
-    FlightCrewJob flightCrewJob1=FlightCrewJob.PILOT;
-    FlightCrewJob flightCrewJob2=FlightCrewJob.CO_PILOT;
-    FlightCrewJob flightCrewJob3=FlightCrewJob.FLIGHT_ATTENDANT;
-
     public CrewMember(String person) {
 
         super(person);
     }
-    public CrewMember(String person, FlightCrewJob FlightCrewJob){
+//    public CrewMember(String person, FlightCrewJob FlightCrewJob){
+//        super(person);
+//        this.job=FlightCrewJob;
+//    }
+    public CrewMember(String person, FlightCrewJob job, float salary){
         super(person);
-        this.job=FlightCrewJob;
+        this.job=job;
+        this.salary=salary;
 
     }
 
+    public FlightCrewJob getJob() {
+        return job;
+    }
 
+    public void setJob(FlightCrewJob job) {
+        this.job = job;
+    }
+
+    @Override
+    public void serve(Person person) {
+    //    person.getName();
+        System.out.println("Serving the passenger"+person.getName());
+    }
+    public void printPaymentAmount() {
+        System.out.println(salary);
+    }
     @Override
     public String toString() {
         return "CrewMember{" +

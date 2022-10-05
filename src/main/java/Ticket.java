@@ -1,4 +1,4 @@
-public abstract class Ticket {
+public abstract class Ticket implements Payable {
     private int id;
     private String orgin;
     private String destination;
@@ -51,5 +51,11 @@ public abstract class Ticket {
 
     public void setPrice(double price) {
         this.price = price;
+    }
+
+    @Override
+    public String toString() {
+        return "Ticket id: " + id+"\n"+ "Orgin: "+ orgin+"\n"+"Destination: "+ destination+"\n"+"seatNumber: "+seatNumber+"\n"+"price= "+price;
+
     }
 }

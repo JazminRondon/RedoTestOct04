@@ -7,12 +7,16 @@ public class Passenger extends Person {
     private String[] luggage;
 
 
-    public Passenger(String person, Ticket ticket, double creditCardLimit, String[] luggage) {
-        super(person);
+    public Passenger(String name, Ticket ticket, double creditCardLimit, String[] luggage) {
+        super(name);
         this.ticket = ticket;
         this.creditCardLimit = creditCardLimit;
         this.luggage = luggage;
     }
+//    public Passenger(String name){
+//        super(name);
+//    }
+
 
     public Ticket getTicket() {
         return ticket;
@@ -44,5 +48,7 @@ public class Passenger extends Person {
     }
     public void printTicket(){
 
+        System.out.println(this.ticket);
     }
+
 }
